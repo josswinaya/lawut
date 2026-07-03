@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { createClient } from '@/lib/supabase/server'
+import { createAdminClient } from '@/lib/supabase/admin'
 import Link from 'next/link'
 import type { JalurRow } from '@/lib/types/shared.types'
 
@@ -81,7 +81,7 @@ const faqList = [
 
 async function getJalurData(): Promise<JalurRow[]> {
   try {
-    const supabase = await createClient()
+    const supabase = createAdminClient()
     const { data } = await supabase
       .from('jalur')
       .select('*')
@@ -172,7 +172,7 @@ export default async function InformasiPage() {
                         <p className="font-bold text-[#2d6a4f]">{harga}</p>
                       </div>
                       <Link
-                        href="/pemesanan"
+                        href={db ? `/pemesanan?jalur_id=${db.id}` : '/pemesanan'}
                         className="px-4 py-2 bg-[#2d6a4f] hover:bg-[#1a3a2a] text-white text-sm font-semibold rounded-lg transition-colors"
                       >
                         Pesan Sekarang

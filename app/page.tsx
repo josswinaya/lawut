@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { createClient } from '@/lib/supabase/server'
+import { createAdminClient } from '@/lib/supabase/admin'
 import type { JalurRow } from '@/lib/types/shared.types'
 
 export const metadata: Metadata = {
@@ -56,7 +56,7 @@ const stats = [
 
 async function getJalurList(): Promise<Pick<JalurRow, 'id' | 'nama' | 'slug' | 'harga_tiket' | 'tingkat_kesulitan' | 'estimasi_waktu_jam'>[]> {
   try {
-    const supabase = await createClient()
+    const supabase = createAdminClient()
     const { data } = await supabase
       .from('jalur')
       .select('id, nama, slug, harga_tiket, tingkat_kesulitan, estimasi_waktu_jam')

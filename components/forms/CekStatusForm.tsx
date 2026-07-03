@@ -73,7 +73,7 @@ export default function CekStatusForm() {
             value={kodeBooking}
             onChange={(e) => setKodeBooking(e.target.value.toUpperCase())}
             placeholder="Contoh: LAWU-20260702-001"
-            className="w-full px-4 py-2.5 rounded-lg border border-[#e2ebe4] bg-[#f8faf9] text-[#1a2e22] text-sm placeholder-[#aab5ad] focus:outline-none focus:ring-2 focus:ring-[#52b788] focus:border-transparent font-mono"
+            className="w-full px-4 py-2.5 rounded-lg border border-[#e2ebe4] bg-[#f8faf9] text-[#1a2e22] text-sm placeholder-[#aab5ad] focus:outline-none focus:ring-2 focus:ring-[#52b788] focus:border-transparent"
           />
         </div>
 

@@ -30,9 +30,11 @@ type BookingResult = {
 
 const STEPS = ['Pilih Jalur & Tanggal', 'Jalur & Data Diri', 'Konfirmasi & Pembayaran']
 
-export default function BookingForm({ jalurList }: { jalurList: Jalur[] }) {
+export default function BookingForm({ jalurList, initialJalurId }: { jalurList: Jalur[], initialJalurId?: string }) {
   const [step, setStep] = useState(0)
-  const [selectedJalur, setSelectedJalur] = useState<Jalur | null>(null)
+  const [selectedJalur, setSelectedJalur] = useState<Jalur | null>(
+    initialJalurId ? jalurList.find(j => j.id === initialJalurId) || null : null
+  )
   const [bookingResult, setBookingResult] = useState<BookingResult | null>(null)
   const [loading, setLoading] = useState(false)
   const [serverError, setServerError] = useState('')
@@ -50,6 +52,7 @@ export default function BookingForm({ jalurList }: { jalurList: Jalur[] }) {
   } = useForm<PemesananFormValues>({
     resolver: zodResolver(pemesananSchema),
     defaultValues: {
+      jalur_id: initialJalurId,
       jumlah_pendaki: 1,
       pendaki: [{ nama: '', nik: '', no_hp: '', kontak_darurat: '' }],
     },

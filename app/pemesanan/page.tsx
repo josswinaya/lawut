@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { createClient } from '@/lib/supabase/server'
+import { createAdminClient } from '@/lib/supabase/admin'
 import BookingForm from '@/components/forms/BookingForm'
 import type { JalurRow } from '@/lib/types/shared.types'
 
@@ -12,7 +12,7 @@ type JalurListItem = Pick<JalurRow, 'id' | 'nama' | 'slug' | 'harga_tiket' | 'ti
 
 async function getJalurList(): Promise<JalurListItem[]> {
   try {
-    const supabase = await createClient()
+    const supabase = createAdminClient()
     const { data } = await supabase
       .from('jalur')
       .select('id, nama, slug, harga_tiket, tingkat_kesulitan, estimasi_waktu_jam, jarak_km, kuota_harian_default')
@@ -24,7 +24,13 @@ async function getJalurList(): Promise<JalurListItem[]> {
   }
 }
 
-export default async function PemesananPage() {
+export default async function PemesananPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>
+}) {
+  const params = await searchParams
+  const initialJalurId = typeof params.jalur_id === 'string' ? params.jalur_id : undefined
   const jalurList = await getJalurList()
 
   return (
@@ -42,7 +48,7 @@ export default async function PemesananPage() {
 
       <section className="py-12 bg-[#f8faf9]">
         <div className="container-lawu">
-          <BookingForm jalurList={jalurList} />
+          <BookingForm jalurList={jalurList} initialJalurId={initialJalurId} />
         </div>
       </section>
     </div>
