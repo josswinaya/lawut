@@ -11,11 +11,12 @@ const kontak = [
     type: 'darurat',
     icon: '🚨',
     label: 'HOTLINE DARURAT 24/7',
-    value: '+62 811-9999-000',
+    value: '112',
     desc: 'Hanya untuk kondisi darurat medis atau evakuasi di jalur pendakian.',
     bg: 'bg-red-50 border-red-200',
     iconBg: 'bg-red-500',
     textColor: 'text-red-700',
+    href: 'tel:112',
   },
   {
     type: 'wa',
@@ -53,7 +54,7 @@ const posKontak = [
   { nama: 'Basecamp Cemoro Sewu', telp: '+62 812-3456-7890', jam: '05:00 – 22:00 WIB' },
   { nama: 'Basecamp Cemoro Kandang', telp: '+62 812-9876-5432', jam: '05:00 – 22:00 WIB' },
   { nama: 'Basecamp Candi Cetho', telp: '+62 813-1122-3344', jam: '06:00 – 20:00 WIB' },
-  { nama: 'Tim SAR Gunung Lawu', telp: '+62 811-9999-000', jam: '24 jam' },
+  { nama: 'Layanan Darurat Nasional', telp: '112', jam: '24 jam' },
 ]
 
 export default function BantuanPage() {
@@ -111,9 +112,6 @@ export default function BantuanPage() {
               {kontak.map((k) => (
                 <div key={k.type} className={`p-5 rounded-xl border ${k.bg}`}>
                   <div className="flex gap-4">
-                    <div className={`w-10 h-10 rounded-xl ${k.iconBg} flex items-center justify-center text-white text-lg shrink-0`}>
-                      {k.icon}
-                    </div>
                     <div>
                       <p className={`text-xs font-semibold tracking-widest uppercase ${k.type === 'darurat' ? 'text-red-500' : 'text-[#52b788]'} mb-1`}>
                         {k.label}
@@ -133,7 +131,7 @@ export default function BantuanPage() {
 
               {/* Jam Operasional */}
               <div className="bg-white rounded-xl border border-[#e2ebe4] p-5">
-                <h3 className="font-bold text-[#1a2e22] mb-3">⏰ Jam Operasional</h3>
+                <h3 className="font-bold text-[#1a2e22] mb-3">Jam Operasional</h3>
                 <div className="space-y-2 text-sm">
                   <div className="flex justify-between">
                     <span className="text-[#6b7c70]">Senin – Jumat</span>

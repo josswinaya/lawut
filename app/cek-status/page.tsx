@@ -32,14 +32,13 @@ export default function CekStatusPage() {
           {/* Info */}
           <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4">
             {[
-              { icon: '⏳', label: 'Menunggu Konfirmasi', desc: 'Pemesanan diterima, menunggu verifikasi pembayaran oleh admin.' },
-              { icon: '✅', label: 'Terkonfirmasi', desc: 'Pembayaran diverifikasi. E-tiket siap diunduh.' },
-              { icon: '❌', label: 'Dibatalkan', desc: 'Pemesanan dibatalkan. Hubungi admin untuk info lebih lanjut.' },
+              { label: 'Menunggu Konfirmasi', desc: 'Pemesanan diterima, menunggu verifikasi pembayaran oleh admin.' },
+              { label: 'Terkonfirmasi', desc: 'Pembayaran diverifikasi. E-tiket siap diunduh.' },
+              { label: 'Dibatalkan', desc: 'Pemesanan dibatalkan. Hubungi admin untuk info lebih lanjut.' },
             ].map((s) => (
-              <div key={s.label} className="bg-white rounded-xl border border-[#e2ebe4] p-4 text-center">
-                <div className="text-2xl mb-2">{s.icon}</div>
-                <p className="font-semibold text-[#1a2e22] text-sm">{s.label}</p>
-                <p className="text-[#6b7c70] text-xs mt-1 leading-relaxed">{s.desc}</p>
+              <div key={s.label} className="bg-white rounded-xl border border-[#e2ebe4] p-5">
+                <p className="font-bold text-[#1a2e22] text-sm mb-1.5">{s.label}</p>
+                <p className="text-[#6b7c70] text-xs leading-relaxed">{s.desc}</p>
               </div>
             ))}
           </div>

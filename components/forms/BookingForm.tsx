@@ -192,7 +192,7 @@ export default function BookingForm({ jalurList, initialJalurId }: { jalurList: 
   }
 
   return (
-    <div className="max-w-4xl mx-auto">
+    <div className="max-w-5xl mx-auto">
       {/* Step indicator */}
       <div className="flex items-center justify-center gap-0 mb-10">
         {STEPS.map((s, i) => (
@@ -484,9 +484,9 @@ export default function BookingForm({ jalurList, initialJalurId }: { jalurList: 
             )}
 
             {/* Tips */}
-            <div className="bg-[#f0f4f1] rounded-2xl p-5">
-              <h3 className="font-bold text-[#1a2e22] mb-3 text-sm">💡 Tips Pendakian</h3>
-              <ul className="space-y-2 text-xs text-[#3a4f40]">
+            <div className="bg-[#f0f4f1] rounded-2xl p-5 overflow-hidden">
+              <h3 className="font-bold text-[#1a2e22] mb-3 text-sm">Tips Pendakian</h3>
+              <ul className="space-y-2 text-xs text-[#3a4f40] lg:whitespace-nowrap whitespace-normal">
                 <li>• Bawa jaket tebal, suhu puncak bisa di bawah 5°C</li>
                 <li>• Minimal 2 liter air minum per orang</li>
                 <li>• Mulai pendakian pagi hari (sebelum jam 6)</li>
