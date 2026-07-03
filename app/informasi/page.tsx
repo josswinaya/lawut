@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 const jalurDetail = [
   {
     slug: 'cemoro-sewu',
-    image: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&q=80',
+    image: '/images/jalur%20c.sewu.jpg',
     asal: 'Magetan, Jawa Timur',
     elevasi: '1.900 mdpl',
     highlight: 'Trek anak tangga batu yang tertata rapi, cocok untuk semua kalangan.',
@@ -20,7 +20,7 @@ const jalurDetail = [
   },
   {
     slug: 'cemoro-kandang',
-    image: 'https://images.unsplash.com/photo-1551632811-561732d1e306?w=800&q=80',
+    image: '/images/jalur%20c.kandang.jpg',
     asal: 'Karanganyar, Jawa Tengah',
     elevasi: '1.820 mdpl',
     highlight: 'Medan tanah landai dengan pemandangan sabana yang luas dan spektakuler.',
@@ -29,7 +29,7 @@ const jalurDetail = [
   },
   {
     slug: 'candi-cetho',
-    image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80',
+    image: '/images/jalur%20c.cetho.jpg',
     asal: 'Karanganyar, Jawa Tengah',
     elevasi: '1.495 mdpl',
     highlight: 'Melewati Candi Cetho bersejarah dengan tanjakan menantang dan suasana mistis.',
@@ -126,7 +126,7 @@ export default async function InformasiPage() {
                 <div key={jalur.slug} id={jalur.slug} className="bg-white rounded-2xl overflow-hidden border border-[#e2ebe4] hover:shadow-lg transition-shadow duration-300">
                   <div className="relative h-48 overflow-hidden">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src={jalur.image} alt={db?.nama ?? jalur.slug} className="w-full h-full object-cover" />
+                    <img src={jalur.image} alt={db?.nama ?? jalur.slug} className="w-full h-full object-cover object-center" />
                   </div>
 
                   <div className="p-6">

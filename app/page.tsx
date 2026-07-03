@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 const jalurInfo = [
   {
     slug: 'cemoro-sewu',
-    image: '/images/gununglawu.webp',
+    image: '/images/jalur%20c.sewu.jpg',
     tingkat: 'Menengah',
     tingkatColor: 'bg-amber-100 text-amber-700',
     estimasi: '± 6-7 Jam',
@@ -19,7 +19,7 @@ const jalurInfo = [
   },
   {
     slug: 'cemoro-kandang',
-    image: 'https://images.unsplash.com/photo-1551632811-561732d1e306?w=600&q=80',
+    image: '/images/jalur%20c.kandang.jpg',
     tingkat: 'Menengah',
     tingkatColor: 'bg-amber-100 text-amber-700',
     estimasi: '± 8-9 Jam',
@@ -27,7 +27,7 @@ const jalurInfo = [
   },
   {
     slug: 'candi-cetho',
-    image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80',
+    image: '/images/jalur%20c.cetho.jpg',
     tingkat: 'Sulit',
     tingkatColor: 'bg-red-100 text-red-600',
     estimasi: '± 10-12 Jam',
@@ -166,7 +166,7 @@ export default async function BerandaPage() {
                     <img
                       src={jalur.image}
                       alt={`Jalur ${dbData?.nama ?? jalur.slug}`}
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
                     />
                   </div>
 
