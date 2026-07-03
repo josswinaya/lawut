@@ -127,11 +127,6 @@ export default async function InformasiPage() {
                   <div className="relative h-48 overflow-hidden">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img src={jalur.image} alt={db?.nama ?? jalur.slug} className="w-full h-full object-cover" />
-                    <div className="absolute top-3 left-3">
-                      <span className="px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full text-xs font-medium">
-                        {jalur.icon} {jalur.asal}
-                      </span>
-                    </div>
                   </div>
 
                   <div className="p-6">
@@ -147,9 +142,9 @@ export default async function InformasiPage() {
                     </div>
 
                     <div className="flex flex-wrap gap-3 text-xs text-[#6b7c70] mb-3">
-                      <span>📍 {jalur.elevasi}</span>
-                      <span>⏱ {db?.estimasi_waktu_jam} jam</span>
-                      <span>📏 {db?.jarak_km} km</span>
+                      <span>{jalur.elevasi}</span>
+                      <span>{db?.estimasi_waktu_jam} jam</span>
+                      <span>{db?.jarak_km} km</span>
                     </div>
 
                     <p className="text-[#6b7c70] text-sm mb-4">{jalur.highlight}</p>

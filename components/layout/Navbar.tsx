@@ -38,8 +38,8 @@ export default function Navbar() {
                   href={link.href}
                   className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors duration-200 ${
                     isActive
-                      ? 'text-[#52b788] bg-white/10'
-                      : 'text-white/80 hover:text-white hover:bg-white/10'
+                      ? 'text-[#52b788]'
+                      : 'text-white/80 hover:text-[#52b788]'
                   }`}
                 >
                   {link.label}
@@ -78,7 +78,7 @@ export default function Navbar() {
               href={link.href}
               onClick={() => setIsOpen(false)}
               className={`block px-4 py-3 rounded-lg text-sm font-medium transition-colors ${
-                pathname === link.href ? 'text-[#52b788] bg-white/10' : 'text-white/80 hover:bg-white/10'
+                pathname === link.href ? 'text-[#52b788]' : 'text-white/80 hover:text-[#52b788]'
               }`}
             >
               {link.label}

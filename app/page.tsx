@@ -11,11 +11,7 @@ export const metadata: Metadata = {
 const jalurInfo = [
   {
     slug: 'cemoro-sewu',
-    badge: 'Tangga Batu',
-    badgeIcon: '🪨',
-    fitur: '3 Sumber Air',
-    fiturIcon: '💧',
-    image: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=600&q=80',
+    image: '/images/gununglawu.webp',
     tingkat: 'Menengah',
     tingkatColor: 'bg-amber-100 text-amber-700',
     estimasi: '± 6-7 Jam',
@@ -23,10 +19,6 @@ const jalurInfo = [
   },
   {
     slug: 'cemoro-kandang',
-    badge: 'Landai & Berliku',
-    badgeIcon: '⛰️',
-    fitur: 'View Sabana',
-    fiturIcon: '☀️',
     image: 'https://images.unsplash.com/photo-1551632811-561732d1e306?w=600&q=80',
     tingkat: 'Menengah',
     tingkatColor: 'bg-amber-100 text-amber-700',
@@ -35,10 +27,6 @@ const jalurInfo = [
   },
   {
     slug: 'candi-cetho',
-    badge: 'Sejarah & Mistis',
-    badgeIcon: '🏛️',
-    fitur: 'Situs Sejarah',
-    fiturIcon: '🗿',
     image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80',
     tingkat: 'Sulit',
     tingkatColor: 'bg-red-100 text-red-600',
@@ -79,11 +67,11 @@ export default async function BerandaPage() {
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1600&q=85')`,
+            backgroundImage: `url('/images/gununglawu.webp')`,
           }}
         />
         {/* Overlay gradient */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#1a3a2a]/90 via-[#1a3a2a]/60 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-transparent" />
 
         <div className="container-lawu relative z-10">
           <div className="max-w-2xl">
@@ -177,14 +165,9 @@ export default async function BerandaPage() {
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       src={jalur.image}
-                      alt={`Jalur ${jalurInfo[i].badge}`}
+                      alt={`Jalur ${dbData?.nama ?? jalur.slug}`}
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     />
-                    <div className="absolute top-3 left-3">
-                      <span className="inline-flex items-center gap-1 px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full text-xs font-medium text-[#1a2e22]">
-                        {jalur.badgeIcon} {jalur.badge}
-                      </span>
-                    </div>
                   </div>
 
                   {/* Content */}
@@ -197,7 +180,7 @@ export default async function BerandaPage() {
                     </div>
 
                     <h3 className="text-xl font-bold text-[#1a2e22] mb-2">
-                      {jalurInfo[i].badge === 'Tangga Batu' ? 'Cemoro Sewu' : jalurInfo[i].badge === 'Landai & Berliku' ? 'Cemoro Kandang' : 'Candi Cetho'}
+                      {dbData?.nama ?? jalur.slug}
                     </h3>
 
                     <p className="text-[#6b7c70] text-sm leading-relaxed mb-4">
@@ -206,8 +189,7 @@ export default async function BerandaPage() {
 
                     <div className="flex items-center justify-between pt-3 border-t border-[#e2ebe4]">
                       <span className="text-xs text-[#6b7c70] flex items-center gap-1">
-                        {jalur.fiturIcon} {jalur.fitur}
-                        {harga && <span className="ml-2 text-[#2d6a4f] font-semibold">{harga}</span>}
+                        {harga && <span className="text-[#2d6a4f] font-semibold">{harga}</span>}
                       </span>
                       <Link
                         href={`/informasi#${jalur.slug}`}
@@ -241,9 +223,6 @@ export default async function BerandaPage() {
               { icon: '💬', title: 'Dukungan WhatsApp', desc: 'Konfirmasi pembayaran langsung lewat WhatsApp dengan admin kami yang responsif.' },
             ].map((item) => (
               <div key={item.title} className="p-6 rounded-2xl border border-[#e2ebe4] hover:border-[#52b788]/50 hover:bg-[#f8faf9] transition-all duration-200">
-                <div className="w-12 h-12 rounded-xl bg-[#d8f3dc] flex items-center justify-center text-2xl mb-4">
-                  {item.icon}
-                </div>
                 <h3 className="font-bold text-[#1a2e22] mb-2">{item.title}</h3>
                 <p className="text-[#6b7c70] text-sm leading-relaxed">{item.desc}</p>
               </div>
