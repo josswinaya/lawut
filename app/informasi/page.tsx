@@ -208,7 +208,6 @@ export default async function InformasiPage() {
                   <div key={p.nama} className={`flex items-center gap-2 px-3 py-2 rounded-lg text-sm ${
                     p.wajib ? 'bg-[#d8f3dc] text-[#1a3a2a]' : 'bg-[#f0f4f1] text-[#6b7c70]'
                   }`}>
-                    <span>{p.wajib ? '✅' : '🔵'}</span>
                     <span>{p.nama}</span>
                     {p.wajib && <span className="ml-auto text-xs text-[#2d6a4f] font-semibold">Wajib</span>}
                   </div>
