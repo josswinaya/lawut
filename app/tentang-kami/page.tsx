@@ -41,7 +41,7 @@ export default function TentangKamiPage() {
       {/* Hero */}
       <section className="relative py-24 bg-[#1a3a2a] overflow-hidden">
         <div className="absolute inset-0 opacity-20"
-          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&q=60')", backgroundSize: 'cover', backgroundPosition: 'center' }} />
+          style={{ backgroundImage: "url('/images/bg%20lawu.jpg')", backgroundSize: 'cover', backgroundPosition: 'center' }} />
         <div className="container-lawu relative z-10 text-center">
           <p className="text-[#52b788] text-sm font-semibold tracking-widest uppercase mb-3">MENGENAL KAMI</p>
           <h1 className="text-4xl sm:text-5xl font-bold text-white mb-4">Tentang LawuT</h1>

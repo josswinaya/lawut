@@ -499,7 +499,7 @@ export default function BookingForm({ jalurList, initialJalurId }: { jalurList: 
               <div className="absolute inset-0 bg-[#1a3a2a] opacity-80" />
               <div
                 className="absolute inset-0"
-                style={{ backgroundImage: "url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=400&q=70')", backgroundSize: 'cover', backgroundPosition: 'center', opacity: 0.4 }}
+                style={{ backgroundImage: "url('/images/bg%20lawu.jpg')", backgroundSize: 'cover', backgroundPosition: 'center', opacity: 0.4 }}
               />
               <div className="relative z-10 p-5 flex flex-col justify-end h-full">
                 <p className="text-white font-bold">Persiapan Matang</p>

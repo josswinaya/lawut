@@ -62,7 +62,7 @@ export default async function BerandaPage() {
   return (
     <div className="min-h-screen">
       {/* ── HERO ──────────────────────────────────────────── */}
-      <section className="relative min-h-[90vh] flex items-center overflow-hidden">
+      <section className="relative min-h-screen flex items-center overflow-hidden">
         {/* Background image */}
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -234,7 +234,7 @@ export default async function BerandaPage() {
       {/* ── CTA BANNER ────────────────────────────────────── */}
       <section className="py-20 bg-[#1a3a2a] relative overflow-hidden">
         <div className="absolute inset-0 opacity-10"
-          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&q=60')", backgroundSize: 'cover', backgroundPosition: 'center' }} />
+          style={{ backgroundImage: "url('/images/bg%20lawu.jpg')", backgroundSize: 'cover', backgroundPosition: 'center' }} />
         <div className="container-lawu relative z-10 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
             Siap Menaklukkan Puncak Lawu?

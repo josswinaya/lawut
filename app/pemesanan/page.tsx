@@ -38,7 +38,7 @@ export default async function PemesananPage({
       {/* Hero kecil */}
       <section className="relative py-16 bg-[#1a3a2a] overflow-hidden">
         <div className="absolute inset-0 opacity-20"
-          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1600&q=60')", backgroundSize: 'cover', backgroundPosition: 'center bottom' }} />
+          style={{ backgroundImage: "url('/images/bg%20lawu.jpg')", backgroundSize: 'cover', backgroundPosition: 'center bottom' }} />
         <div className="container-lawu relative z-10">
           <p className="text-[#52b788] text-sm font-semibold tracking-widest uppercase mb-2">PEMESANAN TIKET</p>
           <h1 className="text-3xl sm:text-4xl font-bold text-white">Pemesanan Tiket - Gunung Lawu</h1>

@@ -12,7 +12,7 @@ export default function CekStatusPage() {
       {/* Hero */}
       <section className="relative py-24 bg-[#1a3a2a] overflow-hidden">
         <div className="absolute inset-0 opacity-20"
-          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1600&q=60')", backgroundSize: 'cover', backgroundPosition: 'center' }} />
+          style={{ backgroundImage: "url('/images/bg%20lawu.jpg')", backgroundSize: 'cover', backgroundPosition: 'center' }} />
         <div className="container-lawu relative z-10 text-center">
           <p className="text-[#52b788] text-sm font-semibold tracking-widest uppercase mb-3">PANTAU PESANANMU</p>
           <h1 className="text-4xl sm:text-5xl font-bold text-white mb-4">Cek Status Pemesanan</h1>
