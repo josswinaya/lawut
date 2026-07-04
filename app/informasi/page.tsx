@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import { createAdminClient } from '@/lib/supabase/admin'
 import Link from 'next/link'
 import type { JalurRow } from '@/lib/types/shared.types'
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
 const jalurDetail = [
   {
     slug: 'cemoro-sewu',
-    image: '/images/jalur%20c.sewu.jpg',
+    image: '/images/jalur_c.sewu.jpg',
     asal: 'Magetan, Jawa Timur',
     elevasi: '1.900 mdpl',
     highlight: 'Trek anak tangga batu yang tertata rapi, cocok untuk semua kalangan.',
@@ -20,7 +21,7 @@ const jalurDetail = [
   },
   {
     slug: 'cemoro-kandang',
-    image: '/images/jalur%20c.kandang.jpg',
+    image: '/images/jalur_c.kandang.jpg',
     asal: 'Karanganyar, Jawa Tengah',
     elevasi: '1.820 mdpl',
     highlight: 'Medan tanah landai dengan pemandangan sabana yang luas dan spektakuler.',
@@ -29,7 +30,7 @@ const jalurDetail = [
   },
   {
     slug: 'candi-cetho',
-    image: '/images/jalur%20c.cetho.jpg',
+    image: '/images/jalur_c.cetho.jpg',
     asal: 'Karanganyar, Jawa Tengah',
     elevasi: '1.495 mdpl',
     highlight: 'Melewati Candi Cetho bersejarah dengan tanjakan menantang dan suasana mistis.',
@@ -104,7 +105,7 @@ export default async function InformasiPage() {
       {/* Hero */}
       <section className="relative py-24 bg-[#1a3a2a] overflow-hidden">
         <div className="absolute inset-0 opacity-20"
-          style={{ backgroundImage: "url('/images/bg%20lawu.jpg')", backgroundSize: 'cover', backgroundPosition: 'center' }} />
+          style={{ backgroundImage: "url('/images/bg_lawu.jpg')", backgroundSize: 'cover', backgroundPosition: 'center' }} />
         <div className="container-lawu relative z-10 text-center">
           <p className="text-[#52b788] text-sm font-semibold tracking-widest uppercase mb-3">PANDUAN PENDAKIAN</p>
           <h1 className="text-4xl sm:text-5xl font-bold text-white mb-4">Informasi Jalur Pendakian</h1>
@@ -128,8 +129,13 @@ export default async function InformasiPage() {
               return (
                 <div key={jalur.slug} id={jalur.slug} className="bg-white rounded-2xl overflow-hidden border border-[#e2ebe4] hover:shadow-lg transition-shadow duration-300">
                   <div className="relative h-48 overflow-hidden">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src={jalur.image} alt={db?.nama ?? jalur.slug} className="w-full h-full object-cover object-center" />
+                    <Image
+                      src={jalur.image}
+                      alt={db?.nama ?? jalur.slug}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                      className="object-cover object-center"
+                    />
                   </div>
 
                   <div className="p-6">

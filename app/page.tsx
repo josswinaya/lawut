@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import TestimonialSlider from '@/components/TestimonialSlider'
 import { createAdminClient } from '@/lib/supabase/admin'
 import type { JalurRow } from '@/lib/types/shared.types'
@@ -12,7 +13,7 @@ export const metadata: Metadata = {
 const jalurInfo = [
   {
     slug: 'cemoro-sewu',
-    image: '/images/jalur%20c.sewu.jpg',
+    image: '/images/jalur_c.sewu.jpg',
     tingkat: 'Menengah',
     tingkatColor: 'bg-amber-100 text-amber-700',
     estimasi: '± 6-7 Jam',
@@ -20,7 +21,7 @@ const jalurInfo = [
   },
   {
     slug: 'cemoro-kandang',
-    image: '/images/jalur%20c.kandang.jpg',
+    image: '/images/jalur_c.kandang.jpg',
     tingkat: 'Menengah',
     tingkatColor: 'bg-amber-100 text-amber-700',
     estimasi: '± 8-9 Jam',
@@ -28,7 +29,7 @@ const jalurInfo = [
   },
   {
     slug: 'candi-cetho',
-    image: '/images/jalur%20c.cetho.jpg',
+    image: '/images/jalur_c.cetho.jpg',
     tingkat: 'Sulit',
     tingkatColor: 'bg-red-100 text-red-600',
     estimasi: '± 10-12 Jam',
@@ -159,11 +160,12 @@ export default async function BerandaPage() {
                 >
                   {/* Foto */}
                   <div className="relative h-52 overflow-hidden">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
+                    <Image
                       src={jalur.image}
                       alt={`Jalur ${dbData?.nama ?? jalur.slug}`}
-                      className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                      fill
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                      className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
                     />
                   </div>
 
@@ -245,7 +247,7 @@ export default async function BerandaPage() {
       {/* ── CTA BANNER ────────────────────────────────────── */}
       <section className="py-20 bg-[#1a3a2a] relative overflow-hidden">
         <div className="absolute inset-0 opacity-10"
-          style={{ backgroundImage: "url('/images/bg%20lawu.jpg')", backgroundSize: 'cover', backgroundPosition: 'center' }} />
+          style={{ backgroundImage: "url('/images/bg_lawu.jpg')", backgroundSize: 'cover', backgroundPosition: 'center' }} />
         <div className="container-lawu relative z-10 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
             Siap Menaklukkan Puncak Lawu?

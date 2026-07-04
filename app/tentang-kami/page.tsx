@@ -8,31 +8,21 @@ export const metadata: Metadata = {
 
 const values = [
   {
-    icon: '🛡️',
     title: 'Safety First',
     desc: 'Keselamatan pendaki adalah prioritas utama kami. Setiap pemesanan dicatat dan dipantau untuk memastikan semua pendaki kembali dengan selamat.',
   },
   {
-    icon: '♻️',
     title: 'Sustainability',
     desc: 'Kami berkomitmen pada pendakian yang bertanggung jawab dan ramah lingkungan. Kuota harian dijaga ketat untuk menjaga ekosistem Gunung Lawu.',
   },
   {
-    icon: '💪',
     title: 'Resilience',
     desc: 'Kami mempersiapkan kamu untuk menghadapi alam yang tidak terduga, membangun kesiapan fisik dan mental untuk pendakian yang sukses.',
   },
   {
-    icon: '🤝',
     title: 'Community',
     desc: 'Kami percaya bahwa mendaki bukan hanya soal puncak, tetapi juga tentang membangun komunitas yang saling mendukung.',
   },
-]
-
-const team = [
-  { nama: 'Pak Hendra', jabatan: 'Kepala Basecamp Cemoro Sewu', foto: '👨‍🦱' },
-  { nama: 'Ibu Sari', jabatan: 'Koordinator Pendakian', foto: '👩‍💼' },
-  { nama: 'Mas Rizki', jabatan: 'Tim SAR & Keselamatan', foto: '👨‍🚀' },
 ]
 
 export default function TentangKamiPage() {
@@ -41,7 +31,7 @@ export default function TentangKamiPage() {
       {/* Hero */}
       <section className="relative py-24 bg-[#1a3a2a] overflow-hidden">
         <div className="absolute inset-0 opacity-20"
-          style={{ backgroundImage: "url('/images/bg%20lawu.jpg')", backgroundSize: 'cover', backgroundPosition: 'center' }} />
+          style={{ backgroundImage: "url('/images/bg_lawu.jpg')", backgroundSize: 'cover', backgroundPosition: 'center' }} />
         <div className="container-lawu relative z-10 text-center">
           <p className="text-[#52b788] text-sm font-semibold tracking-widest uppercase mb-3">MENGENAL KAMI</p>
           <h1 className="text-4xl sm:text-5xl font-bold text-white mb-4">Tentang LawuT</h1>
@@ -96,7 +86,7 @@ export default function TentangKamiPage() {
             <div className="p-8 bg-[#1a3a2a] rounded-2xl text-white">
               <h3 className="text-xl font-bold mb-3">Visi</h3>
               <p className="text-white/80 leading-relaxed">
-                Menjadi platform pemesanan tiket pendakian gunung terpercaya di Indonesia, 
+                Menjadi platform pemesanan tiket pendakian gunung terpercaya di Indonesia,
                 mengedepankan keselamatan, kemudahan, dan kelestarian alam.
               </p>
             </div>
@@ -141,7 +131,7 @@ export default function TentangKamiPage() {
       {/* CTA */}
       <section className="py-16 bg-[#1a3a2a] relative overflow-hidden">
         <div className="absolute inset-0 opacity-10"
-          style={{ backgroundImage: "url('/images/bg%20lawu.jpg')", backgroundSize: 'cover', backgroundPosition: 'center' }} />
+          style={{ backgroundImage: "url('/images/bg_lawu.jpg')", backgroundSize: 'cover', backgroundPosition: 'center' }} />
         <div className="container-lawu relative z-10 text-center">
           <h2 className="text-2xl font-bold text-white mb-4">Siap Memulai Petualangan?</h2>
           <p className="text-white/70 mb-6">Pesan tiket sekarang dan buat kenangan tak terlupakan di puncak Gunung Lawu.</p>
