@@ -65,7 +65,7 @@ export default function TentangKamiPage() {
             <div className="grid grid-cols-2 gap-4">
               {[
                 { val: '2026', label: 'Tahun Berdiri' },
-                { val: '10.000+', label: 'Tiket Terproses' },
+                { val: '500+', label: 'Tiket Terproses' },
                 { val: '3', label: 'Jalur Aktif' },
                 { val: '99%', label: 'Kepuasan Pendaki' },
               ].map((s) => (

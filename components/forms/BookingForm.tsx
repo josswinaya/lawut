@@ -433,7 +433,7 @@ export default function BookingForm({ jalurList, initialJalurId }: { jalurList: 
                 </div>
 
                 <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 text-sm text-amber-800">
-                  <strong>ℹ️ Cara Pembayaran:</strong> Setelah konfirmasi, kamu akan diarahkan ke WhatsApp admin.
+                  <strong>Cara Pembayaran:</strong> Setelah konfirmasi, kamu akan diarahkan ke WhatsApp admin.
                   Transfer ke rekening yang diinfokan admin, kirim bukti transfer, lalu admin akan mengkonfirmasi status tiketmu.
                 </div>
 
@@ -468,9 +468,9 @@ export default function BookingForm({ jalurList, initialJalurId }: { jalurList: 
                 <h3 className="font-bold text-[#1a2e22] mb-3">Jalur Terpilih</h3>
                 <p className="font-semibold text-[#2d6a4f]">{selectedJalur.nama}</p>
                 <div className="text-xs text-[#6b7c70] space-y-1 mt-2">
-                  <p>⏱ ±{selectedJalur.estimasi_waktu_jam} jam</p>
-                  <p>📏 {selectedJalur.jarak_km} km</p>
-                  <p>🎯 Kuota harian: {selectedJalur.kuota_harian_default} pendaki</p>
+                  <p>±{selectedJalur.estimasi_waktu_jam} jam</p>
+                  <p>{selectedJalur.jarak_km} km</p>
+                  <p>Kuota harian: {selectedJalur.kuota_harian_default} pendaki</p>
                 </div>
                 {tanggal && jumlahPendaki && (
                   <div className="mt-4 pt-4 border-t border-[#e2ebe4]">
