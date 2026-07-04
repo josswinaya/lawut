@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Tentang Kami',
-  description: 'Mengenal lebih dekat LawuT — platform resmi pemesanan tiket pendakian Gunung Lawu yang dikelola langsung oleh pengelola basecamp.',
+  description: 'Mengenal lebih dekat LawuT - platform resmi pemesanan tiket pendakian Gunung Lawu yang dikelola langsung oleh pengelola basecamp.',
 }
 
 const values = [

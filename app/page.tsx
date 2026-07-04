@@ -6,7 +6,7 @@ import { createAdminClient } from '@/lib/supabase/admin'
 import type { JalurRow } from '@/lib/types/shared.types'
 
 export const metadata: Metadata = {
-  title: 'LawuT — Pemesanan Tiket Pendakian Gunung Lawu',
+  title: 'LawuT - Pemesanan Tiket Pendakian Gunung Lawu',
   description: 'Platform resmi pemesanan tiket pendakian Gunung Lawu. Pilih jalur favoritmu, cek kuota, dan pesan tiket online dengan mudah.',
 }
 
@@ -66,12 +66,17 @@ export default async function BerandaPage() {
       {/* ── HERO ──────────────────────────────────────────── */}
       <section className="relative min-h-screen flex items-center overflow-hidden">
         {/* Background image */}
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: `url('/images/gununglawu.webp')`,
-          }}
-        />
+        <div className="absolute inset-0">
+          <Image
+            src="/images/gununglawu.webp"
+            alt="Gunung Lawu"
+            fill
+            priority
+            quality={90}
+            className="object-cover object-center"
+            sizes="100vw"
+          />
+        </div>
         {/* Overlay gradient */}
         <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-transparent" />
 
@@ -114,7 +119,7 @@ export default async function BerandaPage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {stats.map((stat) => (
               <div key={stat.label} className="text-center">
-                <p className="text-3xl font-bold text-[#52b788]">{stat.value}</p>
+                <p className="text-3xl font-bold text-[#2d6a4f]">{stat.value}</p>
                 <p className="text-white/60 text-sm mt-1">{stat.label}</p>
               </div>
             ))}
@@ -127,13 +132,13 @@ export default async function BerandaPage() {
         <div className="container-lawu">
           <div className="flex items-end justify-between mb-10">
             <div>
-              <p className="text-[#52b788] text-sm font-semibold tracking-widest uppercase mb-2">
+              <p className="text-[#2d6a4f] text-sm font-semibold tracking-widest uppercase mb-2">
                 PILIH RUTE TERBAIKMU
               </p>
               <h2 className="text-3xl sm:text-4xl font-bold text-[#1a2e22]">
                 Jalur Utama Pendakian Lawu
               </h2>
-              <p className="text-[#6b7c70] mt-3 max-w-xl">
+              <p className="text-[#4a5d53] mt-3 max-w-xl">
                 Setiap jalur memiliki karakteristik unik, mulai dari anak tangga batu yang tersusun rapi
                 hingga pemandangan sabana yang menantang.
               </p>
@@ -175,19 +180,19 @@ export default async function BerandaPage() {
                       <span className={`px-2.5 py-0.5 rounded-full text-xs font-medium ${jalur.tingkatColor}`}>
                         {jalur.tingkat}
                       </span>
-                      <span className="text-[#6b7c70] text-xs">{jalur.estimasi}</span>
+                      <span className="text-[#4a5d53] text-xs">{jalur.estimasi}</span>
                     </div>
 
                     <h3 className="text-xl font-bold text-[#1a2e22] mb-2">
                       {dbData?.nama ?? jalur.slug}
                     </h3>
 
-                    <p className="text-[#6b7c70] text-sm leading-relaxed mb-4">
+                    <p className="text-[#4a5d53] text-sm leading-relaxed mb-4">
                       {jalur.description}
                     </p>
 
                     <div className="flex items-center justify-between pt-3 border-t border-[#e2ebe4]">
-                      <span className="text-xs text-[#6b7c70] flex items-center gap-1">
+                      <span className="text-xs text-[#4a5d53] flex items-center gap-1">
                         {harga && <span className="text-[#2d6a4f] font-semibold">{harga}</span>}
                       </span>
                       <Link
@@ -209,7 +214,7 @@ export default async function BerandaPage() {
       <section className="py-20 bg-white">
         <div className="container-lawu">
           <div className="text-center mb-12">
-            <p className="text-[#52b788] text-sm font-semibold tracking-widest uppercase mb-2">KEUNGGULAN</p>
+            <p className="text-[#2d6a4f] text-sm font-semibold tracking-widest uppercase mb-2">KEUNGGULAN</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-[#1a2e22]">
               Kenapa Pesan di LawuT?
             </h2>
@@ -223,7 +228,7 @@ export default async function BerandaPage() {
             ].map((item) => (
               <div key={item.title} className="p-6 rounded-2xl border border-[#e2ebe4] hover:border-[#52b788]/50 hover:bg-[#f8faf9] transition-all duration-200">
                 <h3 className="font-bold text-[#1a2e22] mb-2">{item.title}</h3>
-                <p className="text-[#6b7c70] text-sm leading-relaxed">{item.desc}</p>
+                <p className="text-[#4a5d53] text-sm leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -234,7 +239,7 @@ export default async function BerandaPage() {
       <section className="py-20 bg-[#f8faf9] overflow-hidden">
         <div className="container-lawu">
           <div className="text-center mb-12">
-            <p className="text-[#52b788] text-sm font-semibold tracking-widest uppercase mb-2">ULASAN</p>
+            <p className="text-[#2d6a4f] text-sm font-semibold tracking-widest uppercase mb-2">ULASAN</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-[#1a2e22]">
               Apa Kata Pendaki?
             </h2>

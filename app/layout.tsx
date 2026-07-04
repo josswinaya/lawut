@@ -12,7 +12,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: 'LawuT — Pemesanan Tiket Pendakian Gunung Lawu',
+    default: 'LawuT - Pemesanan Tiket Pendakian Gunung Lawu',
     template: '%s | LawuT',
   },
   description:
