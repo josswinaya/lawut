@@ -251,8 +251,15 @@ export default async function BerandaPage() {
 
       {/* ── CTA BANNER ────────────────────────────────────── */}
       <section className="py-20 bg-[#1a3a2a] relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10"
-          style={{ backgroundImage: "url('/images/bg_lawu.jpg')", backgroundSize: 'cover', backgroundPosition: 'center' }} />
+        <div className="absolute inset-0 opacity-10">
+          <Image
+            src="/images/bg_lawu.jpg"
+            alt="Gunung Lawu"
+            fill
+            className="object-cover object-center"
+            sizes="100vw"
+          />
+        </div>
         <div className="container-lawu relative z-10 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
             Siap Menaklukkan Puncak Lawu?
