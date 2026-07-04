@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import TestimonialSlider from '@/components/TestimonialSlider'
 import { createAdminClient } from '@/lib/supabase/admin'
 import type { JalurRow } from '@/lib/types/shared.types'
 
@@ -224,6 +225,20 @@ export default async function BerandaPage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* ── TESTIMONI / REVIEW ────────────────────────────── */}
+      <section className="py-20 bg-[#f8faf9] overflow-hidden">
+        <div className="container-lawu">
+          <div className="text-center mb-12">
+            <p className="text-[#52b788] text-sm font-semibold tracking-widest uppercase mb-2">ULASAN</p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#1a2e22]">
+              Apa Kata Pendaki?
+            </h2>
+          </div>
+          
+          <TestimonialSlider />
         </div>
       </section>
 

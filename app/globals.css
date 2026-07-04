@@ -54,3 +54,16 @@ html {
   .container-lawu { padding-inline: 3rem; }
 }
 
+/* Marquee / Infinite Scroll Animation */
+@keyframes loop-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-100%); }
+}
+
+.animate-loop-scroll {
+  animation: loop-scroll 30s linear infinite;
+}
+
+.group:hover .animate-loop-scroll {
+  animation-play-state: paused;
+}
