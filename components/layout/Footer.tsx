@@ -8,9 +8,6 @@ export default function Footer() {
           {/* Brand */}
           <div className="md:col-span-2">
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 bg-[#52b788] rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">GL</span>
-              </div>
               <span className="font-bold text-lg">LawuT</span>
             </div>
             <p className="text-[#a8c5b0] text-sm leading-relaxed max-w-xs">
@@ -28,9 +25,9 @@ export default function Footer() {
             </h3>
             <ul className="space-y-3">
               {[
-                { label: 'Syarat & Ketentuan', href: '#' },
+                { label: 'Syarat & Ketentuan', href: '/informasi' },
                 { label: 'Kebijakan Privasi', href: '#' },
-                { label: 'Peta Situs', href: '#' },
+                { label: 'Peta Situs', href: '/informasi' },
               ].map((item) => (
                 <li key={item.href}>
                   <Link

@@ -21,11 +21,8 @@ export default function Navbar() {
       <div className="container-lawu">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 group">
-            <div className="w-8 h-8 bg-[#52b788] rounded-lg flex items-center justify-center transition-colors group-hover:bg-[#74c69d]">
-              <span className="text-white font-bold text-sm">GL</span>
-            </div>
-            <span className="text-white font-semibold text-lg">LawuT</span>
+          <Link href="/" className="flex items-center group">
+            <span className="text-white font-bold text-2xl tracking-tight">LawuT</span>
           </Link>
 
           {/* Desktop Nav */}
