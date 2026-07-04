@@ -40,21 +40,24 @@ const jalurDetail = [
 
 const syaratKetentuan = [
   'Minimal usia 10 tahun (pendaki di bawah 17 tahun wajib didampingi orang tua/wali)',
-  'Wajib membawa KTP/Kartu Pelajar yang masih berlaku',
-  'Surat keterangan sehat dari dokter (opsional, sangat dianjurkan)',
-  'Tidak diperbolehkan mendaki saat sakit atau dalam kondisi tubuh tidak prima',
-  'Wajib mengisi data diri lengkap saat pemesanan tiket',
-  'Pendaki wajib kembali turun dalam waktu yang ditentukan',
+  'Wajib membawa KTP/SIM/Kartu Pelajar yang masih berlaku',
+  'Surat keterangan sehat dari dokter (wajib bagi pendaki usia >50 tahun)',
+  'Membawa bukti registrasi (cetak/digital) dan wajib melapor ke petugas pos',
+  'Dilarang membawa senjata tajam, obat terlarang, dan minuman beralkohol',
+  'Dilarang membuat api unggun dan mengambil flora/fauna di kawasan taman nasional',
+  'Wajib membawa kembali sampah turun (prinsip "pack it in, pack it out")',
+  'Wajib mengikuti jalur yang telah ditentukan (dilarang membuat jalur baru)',
 ]
 
 const perlengkapan = [
   { nama: 'Jaket tebal / windbreaker', wajib: true },
-  { nama: 'Sepatu gunung / hiking', wajib: true },
+  { nama: 'Sepatu gunung / trekking', wajib: true },
   { nama: 'Jas hujan / ponco', wajib: true },
-  { nama: 'Headlamp + baterai cadangan', wajib: true },
+  { nama: 'Senter / Headlamp + baterai', wajib: true },
   { nama: 'Air minum minimal 2 liter', wajib: true },
-  { nama: 'P3K dasar', wajib: true },
-  { nama: 'Tenda & sleeping bag', wajib: false },
+  { nama: 'P3K dasar & obat pribadi', wajib: true },
+  { nama: 'Kantong sampah (trash bag)', wajib: true },
+  { nama: 'Tenda & sleeping bag (jika ngecamp)', wajib: false },
   { nama: 'Kompor portable + nesting', wajib: false },
   { nama: 'Gaiter / pelindung kaki', wajib: false },
   { nama: 'Kacamata UV protection', wajib: false },
@@ -106,7 +109,7 @@ export default async function InformasiPage() {
           <p className="text-[#52b788] text-sm font-semibold tracking-widest uppercase mb-3">PANDUAN PENDAKIAN</p>
           <h1 className="text-4xl sm:text-5xl font-bold text-white mb-4">Informasi Jalur Pendakian</h1>
           <p className="text-white/70 max-w-2xl mx-auto text-lg">
-            Semua yang perlu kamu ketahui sebelum mendaki Gunung Lawu — jalur, syarat, perlengkapan, dan tarif.
+            Semua yang perlu kamu ketahui sebelum mendaki Gunung Lawu, jalur, syarat, perlengkapan, dan tarif.
           </p>
         </div>
       </section>
@@ -218,8 +221,43 @@ export default async function InformasiPage() {
         </div>
       </section>
 
-      {/* FAQ */}
+      {/* Peta Jalur */}
       <section className="py-20 bg-[#f8faf9]">
+        <div className="container-lawu max-w-4xl">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl font-bold text-[#1a2e22] mb-4">Peta Jalur Pendakian</h2>
+            <p className="text-[#6b7c70] max-w-2xl mx-auto">
+              Jelajahi peta interaktif di bawah ini untuk melihat gambaran area pendakian Gunung Lawu.
+            </p>
+          </div>
+          <div className="bg-white rounded-2xl border border-[#e2ebe4] p-2 overflow-hidden hover:border-[#52b788]/50 transition-colors duration-300 shadow-sm">
+            <div className="aspect-[4/3] sm:aspect-video relative rounded-xl overflow-hidden bg-[#f0f4f1] border border-[#e2ebe4]">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63255.45781358045!2d111.15783305436697!3d-7.627375253813134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e798e7275d3151b%3A0xc3cd83606900fdfd!2sGn.%20Lawu!5e0!3m2!1sid!2sid!4v1711123456789!5m2!1sid!2sid" 
+                width="100%" 
+                height="100%" 
+                style={{ border: 0, position: 'absolute', top: 0, left: 0 }} 
+                allowFullScreen 
+                loading="lazy" 
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Peta Interaktif Gunung Lawu"
+              ></iframe>
+            </div>
+            <div className="p-4 flex flex-col sm:flex-row sm:items-center justify-between bg-[#f8faf9] mt-2 rounded-xl gap-4">
+              <div>
+                <p className="text-sm font-bold text-[#1a2e22]">Jalur Pendakian Resmi</p>
+                <p className="text-xs text-[#6b7c70]">Cemoro Sewu, Cemoro Kandang, Candi Cetho</p>
+              </div>
+              <button className="text-sm font-semibold text-[#52b788] hover:text-[#2d6a4f] transition-colors whitespace-nowrap">
+                Unduh Peta
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-20 bg-white">
         <div className="container-lawu max-w-3xl">
           <h2 className="text-2xl font-bold text-[#1a2e22] mb-8">Pertanyaan Umum</h2>
           <div className="space-y-4">

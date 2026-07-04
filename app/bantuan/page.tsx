@@ -68,7 +68,7 @@ export default function BantuanPage() {
           <p className="text-[#52b788] text-sm font-semibold tracking-widest uppercase mb-3">BANTUAN & DUKUNGAN</p>
           <h1 className="text-4xl sm:text-5xl font-bold text-white mb-4">Pusat Bantuan</h1>
           <p className="text-white/70 max-w-xl mx-auto text-lg">
-            Tim kami siap membantu kamu — baik untuk pertanyaan pemesanan maupun bantuan darurat di jalur.
+            Tim kami siap membantu kamu, baik untuk pertanyaan pemesanan maupun bantuan darurat di jalur.
           </p>
         </div>
       </section>
